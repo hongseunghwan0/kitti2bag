@@ -98,3 +98,12 @@ I appreciate [pull requests](https://github.com/tomas789/kitti2bag/pulls) with b
 
  * [pykitti](https://github.com/utiasSTARS/pykitti) is very simple library for dealing with KITTI dataset in python. 
  * [kitti_player](https://github.com/tomas789/kitti_player) allows to play dataset directly. No bag file needed. I found difficult to get it work. Some bug fixed can be found in [my fork of kitti_player](https://github.com/tomas789/kitti_player) but still not good enough.
+
+
+## Example (by Insik Baek)
+
+kitti2bag -t 2011_09_26 -r 0002 raw_synced .
+
+rosbag play kitti_2011_09_26_drive_0002_synced.bag
+rosrun image_view image_view image:=/kitti/camera_color_left/image_raw
+rostopic echo /kitti/oxts/gps/fix
